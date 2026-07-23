@@ -149,14 +149,14 @@
   .services-grid {
     display: grid; grid-template-columns: 1fr; gap: 1px;
   }
-  @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
   .service-card {
     border: 1px solid rgba(243,241,236,0.1); padding: 32px;
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
   }
   .service-card:hover { background: rgba(91,107,61,0.2); transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.25); }
   @media (min-width: 768px) {
-    .service-card:nth-child(2), .service-card:nth-child(5) { margin-top: -18px; }
+    .service-card:nth-child(even) { margin-top: -18px; }
   }
   .service-card p:first-child { font-weight: 700; font-size: 18px; margin-bottom: 8px; }
   .service-card p:last-child { font-size: 15px; color: rgba(243,241,236,0.7); line-height: 1.5; }
@@ -314,14 +314,16 @@
   }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
-  /* ===== IMAGE BLOCKS: fotos grandes y limpias, ícono solo como respaldo ===== */
+  /* ===== IMAGE BLOCKS: fotos grandes, horizontales y limpias ===== */
   .img-block {
     position: relative; border-radius: 8px; overflow: hidden;
-    min-height: 260px; display: flex; align-items: center; justify-content: center; flex-direction: column;
+    aspect-ratio: 16 / 9; min-height: 220px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
     background: linear-gradient(135deg, var(--navy) 0%, #1c3350 100%);
     gap: 12px; box-shadow: 0 10px 24px rgba(15,29,45,0.18);
   }
-  @media (min-width: 640px) { .img-block { min-height: 220px; } }
+  @media (min-width: 640px) { .img-block { min-height: 200px; } }
+  @media (min-width: 1024px) { .img-block { aspect-ratio: 16 / 8; } }
   .img-block::before {
     content: ''; position: absolute; inset: 0; z-index: 0;
     background-image:
@@ -460,7 +462,7 @@
   </header>
 
   <section id="inicio">
-    <img class="hero-photo" loading="eager" decoding="async" src="assets/hero-fondo-sutil.jpg" alt="" onerror="this.style.display='none'">
+    <img class="hero-photo" loading="eager" fetchpriority="high" decoding="async" src="assets/hero-fondo-sutil.jpg" alt="" onerror="this.style.display='none'">
     <div class="hero-scrim"></div>
     <div class="hero-bg"></div>
     <div class="container">
