@@ -234,7 +234,8 @@
   @media (min-width: 768px) { .footer-inner { flex-direction: row; justify-content: space-between; } }
 
   /* ===== WHATSAPP FLOTANTE ===== */
-  .wa-wrap-float { position: fixed; bottom: 24px; right: 24px; z-index: 50; }
+  .wa-wrap { position: relative; display: inline-block; }
+  .wa-wrap.wa-wrap-float { position: fixed; bottom: 24px; right: 24px; z-index: 50; display: block; }
   .wa-float {
     background: var(--olive); color: var(--cream); border: none; cursor: pointer;
     width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center;
@@ -243,7 +244,6 @@
   .wa-float:hover { background: var(--gold); color: var(--navy); }
 
   /* ===== Menú emergente: elegir "Enviar mensaje" o "Llamar" ===== */
-  .wa-wrap { position: relative; display: inline-block; }
   .wa-trigger { cursor: pointer; font-family: inherit; background: none; outline: none; }
   .wa-menu {
     position: absolute; bottom: calc(100% + 10px); right: 0;
