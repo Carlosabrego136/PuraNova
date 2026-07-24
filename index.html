@@ -475,11 +475,12 @@
   .mini-card:hover { box-shadow: 0 16px 32px rgba(15,29,45,0.12); border-color: var(--gold); transform: translateY(-4px); }
   .mini-card .icon-sm { width: 24px; height: 24px; margin-bottom: 8px; }
   .mini-card p { font-size: 15px; font-weight: 700; line-height: 1.4; }
-  .mini-card { padding: 0 0 22px; }
+  .mini-card.has-photo { padding: 0 0 18px; }
   .mini-card-photo {
     width: 100%; aspect-ratio: 4 / 3; border-radius: 12px 12px 0 0; overflow: hidden;
-    margin: 0 0 16px; position: relative;
+    margin: 0 0 14px; position: relative;
   }
+  .mini-card-photo.ratio-16-9 { aspect-ratio: 16 / 9; }
   .mini-card-photo::after {
     content: ''; position: absolute; inset: 0; border-radius: 12px 12px 0 0;
     box-shadow: inset 0 -30px 30px -20px rgba(15,29,45,0.45), inset 0 0 0 1px rgba(255,255,255,0.08);
@@ -490,7 +491,7 @@
     transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .mini-card:hover .mini-card-photo img { transform: scale(1.09); }
-  .mini-card p.mini-card-label { padding: 0 20px; }
+  .mini-card.has-photo p.mini-card-label { padding: 0 16px; font-size: 14px; }
 
   /* ===== DIFERENCIADORES ===== */
   #diferenciadores { background: var(--navy); color: var(--cream); }
@@ -759,10 +760,10 @@
             </div>
           </div>
           <div class="mini-grid reveal">
-            <div class="mini-card"><div class="mini-card-photo"><img src="assets/calidad-garantizada.jpg" alt="Calidad garantizada" style="object-position: 62% 45%;" loading="lazy"></div><p class="mini-card-label">Calidad garantizada</p></div>
-            <div class="mini-card"><div class="mini-card-photo"><img src="assets/entrega-a-tiempo.jpg" alt="Entrega a tiempo" style="object-position: 50% 68%;" loading="lazy"></div><p class="mini-card-label">Entrega a tiempo</p></div>
-            <div class="mini-card"><div class="mini-card-photo"><img src="assets/mejores-condiciones.jpg" alt="Mejores condiciones" style="object-position: 50% 62%;" loading="lazy"></div><p class="mini-card-label">Mejores condiciones</p></div>
-            <div class="mini-card"><div class="mini-card-photo"><img src="assets/abasto-confiable.jpg" alt="Abasto confiable" style="object-position: 50% 55%;" loading="lazy"></div><p class="mini-card-label">Abasto confiable</p></div>
+            <div class="mini-card has-photo"><div class="mini-card-photo"><img src="assets/calidad-garantizada.jpg" alt="Calidad garantizada" style="object-position: 62% 45%;" loading="lazy"></div><p class="mini-card-label">Calidad garantizada</p></div>
+            <div class="mini-card has-photo"><div class="mini-card-photo"><img src="assets/entrega-a-tiempo.jpg" alt="Entrega a tiempo" style="object-position: 50% 68%;" loading="lazy"></div><p class="mini-card-label">Entrega a tiempo</p></div>
+            <div class="mini-card has-photo"><div class="mini-card-photo"><img src="assets/mejores-condiciones.jpg" alt="Mejores condiciones" style="object-position: 50% 62%;" loading="lazy"></div><p class="mini-card-label">Mejores condiciones</p></div>
+            <div class="mini-card has-photo"><div class="mini-card-photo"><img src="assets/abasto-confiable.jpg" alt="Abasto confiable" style="object-position: 50% 55%;" loading="lazy"></div><p class="mini-card-label">Abasto confiable</p></div>
           </div>
         </div>
       </div>
@@ -818,25 +819,25 @@
         <p class="detail-desc reveal" style="text-align:center; max-width:560px; margin:0 auto 40px;">Equipos, materiales e insumos entregados con seguridad, puntualidad y cobertura nacional e internacional.</p>
 
         <div class="mini-grid cols-5 reveal">
-          <div class="mini-card" style="text-align:center;">
-            <div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><rect x="1" y="9" width="14" height="9"/><path d="M15 12h4l3 3v3h-7z"/></svg></div>
-            <p>Transporte terrestre</p>
+          <div class="mini-card has-photo" style="text-align:center;">
+            <div class="mini-card-photo ratio-16-9"><img src="assets/transporte-terrestre.jpg" alt="Transporte terrestre" style="object-position: 50% 55%;" loading="lazy"></div>
+            <p class="mini-card-label">Transporte terrestre</p>
           </div>
-          <div class="mini-card" style="text-align:center;">
-            <div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M3 18l2-7h14l2 7"/><path d="M5 11V6h9l3 5"/><circle cx="8" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></div>
-            <p>Transporte marítimo</p>
+          <div class="mini-card has-photo" style="text-align:center;">
+            <div class="mini-card-photo ratio-16-9"><img src="assets/transporte-maritimo.jpg" alt="Transporte marítimo" style="object-position: 50% 60%;" loading="lazy"></div>
+            <p class="mini-card-label">Transporte marítimo</p>
           </div>
-          <div class="mini-card" style="text-align:center;">
-            <div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M2 16l20-6-6 6 2 6-4-3-3 3-1-5z"/></svg></div>
-            <p>Transporte aéreo</p>
+          <div class="mini-card has-photo" style="text-align:center;">
+            <div class="mini-card-photo ratio-16-9"><img src="assets/transporte-aereo.jpg" alt="Transporte aéreo" style="object-position: 50% 45%;" loading="lazy"></div>
+            <p class="mini-card-label">Transporte aéreo</p>
           </div>
-          <div class="mini-card" style="text-align:center;">
-            <div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg></div>
-            <p>Almacenaje y distribución</p>
+          <div class="mini-card has-photo" style="text-align:center;">
+            <div class="mini-card-photo ratio-16-9"><img src="assets/almacenaje-distribucion.jpg" alt="Almacenaje y distribución" style="object-position: 50% 55%;" loading="lazy"></div>
+            <p class="mini-card-label">Almacenaje y distribución</p>
           </div>
-          <div class="mini-card" style="text-align:center;">
-            <div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="17" rx="2"/></svg></div>
-            <p>Gestión y seguimiento</p>
+          <div class="mini-card has-photo" style="text-align:center;">
+            <div class="mini-card-photo ratio-16-9"><img src="assets/gestion-seguimiento.jpg" alt="Gestión y seguimiento" style="object-position: 50% 40%;" loading="lazy"></div>
+            <p class="mini-card-label">Gestión y seguimiento</p>
           </div>
         </div>
       </div>
