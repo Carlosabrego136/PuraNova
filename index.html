@@ -475,6 +475,22 @@
   .mini-card:hover { box-shadow: 0 16px 32px rgba(15,29,45,0.12); border-color: var(--gold); transform: translateY(-4px); }
   .mini-card .icon-sm { width: 24px; height: 24px; margin-bottom: 8px; }
   .mini-card p { font-size: 15px; font-weight: 700; line-height: 1.4; }
+  .mini-card { padding: 0 0 22px; }
+  .mini-card-photo {
+    width: 100%; aspect-ratio: 4 / 3; border-radius: 12px 12px 0 0; overflow: hidden;
+    margin: 0 0 16px; position: relative;
+  }
+  .mini-card-photo::after {
+    content: ''; position: absolute; inset: 0; border-radius: 12px 12px 0 0;
+    box-shadow: inset 0 -30px 30px -20px rgba(15,29,45,0.45), inset 0 0 0 1px rgba(255,255,255,0.08);
+    pointer-events: none;
+  }
+  .mini-card-photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .mini-card:hover .mini-card-photo img { transform: scale(1.09); }
+  .mini-card p.mini-card-label { padding: 0 20px; }
 
   /* ===== DIFERENCIADORES ===== */
   #diferenciadores { background: var(--navy); color: var(--cream); }
@@ -743,10 +759,10 @@
             </div>
           </div>
           <div class="mini-grid reveal">
-            <div class="mini-card"><div class="icon-badge"><svg class="icon-sm navy" viewBox="0 0 24 24"><path d="M12 15a4 4 0 100-8 4 4 0 000 8z"/><path d="M12 1l2.5 5 5.5.5-4 4 1 5.5-5-3-5 3 1-5.5-4-4 5.5-.5z"/></svg></div><p>Calidad garantizada</p></div>
-            <div class="mini-card"><div class="icon-badge"><svg class="icon-sm navy" viewBox="0 0 24 24"><rect x="1" y="9" width="14" height="9"/><path d="M15 12h4l3 3v3h-7z"/></svg></div><p>Entrega a tiempo</p></div>
-            <div class="mini-card"><div class="icon-badge"><svg class="icon-sm navy" viewBox="0 0 24 24"><path d="M12 1v22M5 8h14M5 16h14"/></svg></div><p>Mejores condiciones</p></div>
-            <div class="mini-card"><div class="icon-badge"><svg class="icon-sm navy" viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg></div><p>Abasto confiable</p></div>
+            <div class="mini-card"><div class="mini-card-photo"><img src="assets/calidad-garantizada.jpg" alt="Calidad garantizada" style="object-position: 62% 45%;" loading="lazy"></div><p class="mini-card-label">Calidad garantizada</p></div>
+            <div class="mini-card"><div class="mini-card-photo"><img src="assets/entrega-a-tiempo.jpg" alt="Entrega a tiempo" style="object-position: 50% 68%;" loading="lazy"></div><p class="mini-card-label">Entrega a tiempo</p></div>
+            <div class="mini-card"><div class="mini-card-photo"><img src="assets/mejores-condiciones.jpg" alt="Mejores condiciones" style="object-position: 50% 62%;" loading="lazy"></div><p class="mini-card-label">Mejores condiciones</p></div>
+            <div class="mini-card"><div class="mini-card-photo"><img src="assets/abasto-confiable.jpg" alt="Abasto confiable" style="object-position: 50% 55%;" loading="lazy"></div><p class="mini-card-label">Abasto confiable</p></div>
           </div>
         </div>
       </div>
