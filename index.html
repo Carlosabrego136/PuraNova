@@ -243,6 +243,11 @@
   }
   .sector-card:hover .icon-badge { transform: scale(1.08) rotate(-4deg); }
   .sector-card .icon-badge svg { width: 34px; height: 34px; }
+  .sector-card .icon-badge.has-img {
+    background: var(--cream); box-shadow: 0 6px 16px rgba(15,29,45,0.18), inset 0 1px 2px rgba(255,255,255,0.4);
+    overflow: hidden;
+  }
+  .sector-card .icon-badge.has-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 
   /* ===== COMO TRABAJAMOS ===== */
   .steps-grid {
@@ -852,14 +857,14 @@
       <p class="lead">Trabajamos con diversos sectores, brindando soluciones integrales adaptadas a las necesidades de cada industria.</p>
 
       <div class="sectors-grid reveal">
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><p>Construcción</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div><p>Energía</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M2 21h20M4 21V11l5 3V11l5 3V9l5 3v9"/></svg></div><p>Industrial</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><rect x="1" y="9" width="14" height="9"/><path d="M15 12h4l3 3v3h-7z"/></svg></div><p>Logística y transporte</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.2"/><circle cx="18" cy="20" r="1.2"/><path d="M2 3h3l2.4 12.4A2 2 0 009.4 17H18a2 2 0 002-1.6L21.5 7H6"/></svg></div><p>Comercial</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-5h6v5"/></svg></div><p>Gobierno</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.6 1.6 0 00-1.8-.3 1.6 1.6 0 00-1 1.5V21a2 2 0 01-4 0v-.1a1.6 1.6 0 00-1-1.5 1.6 1.6 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.6 1.6 0 00.3-1.8 1.6 1.6 0 00-1.5-1H3a2 2 0 010-4h.1a1.6 1.6 0 001.5-1 1.6 1.6 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.6 1.6 0 001.8.3H9a1.6 1.6 0 001-1.5V3a2 2 0 014 0v.1a1.6 1.6 0 001 1.5 1.6 1.6 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.6 1.6 0 00-.3 1.8V9a1.6 1.6 0 001.5 1h.1a2 2 0 010 4h-.1a1.6 1.6 0 00-1.5 1z"/></svg></div><p>Servicios</p></div>
-        <div class="sector-card"><div class="icon-badge"><svg class="icon-sm navy" style="margin:0 auto 10px;" viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4c0 3-4 8-4 8s-4-5-4-8a4 4 0 014-4z"/><path d="M6 14l-2 8h16l-2-8"/></svg></div><p>Otros sectores</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-construccion.jpg" alt="Construcción" loading="lazy"></div><p>Construcción</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-energia.jpg" alt="Energía" loading="lazy"></div><p>Energía</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-industrial.jpg" alt="Industrial" loading="lazy"></div><p>Industrial</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-logistica.jpg" alt="Logística y transporte" loading="lazy"></div><p>Logística y transporte</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-comercial.jpg" alt="Comercial" loading="lazy"></div><p>Comercial</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-gobierno.jpg" alt="Gobierno" loading="lazy"></div><p>Gobierno</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-servicios.jpg" alt="Servicios" loading="lazy"></div><p>Servicios</p></div>
+        <div class="sector-card"><div class="icon-badge has-img"><img src="assets/sector-otros.jpg" alt="Otros sectores" loading="lazy"></div><p>Otros sectores</p></div>
       </div>
     </div>
   </section>
