@@ -1153,13 +1153,37 @@
           </div>
         </div>
 
-        <form>
-          <input type="text" placeholder="Nombre">
-          <input type="email" placeholder="Correo electrónico">
-          <input type="text" placeholder="Empresa">
-          <textarea placeholder="Cuéntanos sobre tu proyecto" rows="4"></textarea>
+        <form id="contactForm" onsubmit="return enviarPorCorreo(event)">
+          <input type="text" id="cf-nombre" placeholder="Nombre" required>
+          <input type="email" id="cf-correo" placeholder="Correo electrónico" required>
+          <input type="text" id="cf-empresa" placeholder="Empresa">
+          <textarea id="cf-mensaje" placeholder="Cuéntanos sobre tu proyecto" rows="4" required></textarea>
           <button type="submit">Solicitar información</button>
         </form>
+        <script>
+          function enviarPorCorreo(e) {
+            e.preventDefault();
+            var nombre = document.getElementById('cf-nombre').value.trim();
+            var correo = document.getElementById('cf-correo').value.trim();
+            var empresa = document.getElementById('cf-empresa').value.trim();
+            var mensaje = document.getElementById('cf-mensaje').value.trim();
+
+            var asunto = 'Solicitud de información - ' + (empresa || nombre || 'Sitio web PURANOVA');
+            var cuerpo =
+              'Nombre: ' + nombre + '\n' +
+              'Correo: ' + correo + '\n' +
+              'Empresa: ' + (empresa || 'N/A') + '\n\n' +
+              'Mensaje:\n' + mensaje;
+
+            var destinatario = 'contacto@puranova.com.mx';
+            var mailtoLink = 'mailto:' + destinatario +
+              '?subject=' + encodeURIComponent(asunto) +
+              '&body=' + encodeURIComponent(cuerpo);
+
+            window.location.href = mailtoLink;
+            return false;
+          }
+        </script>
       </div>
     </div>
   </section>
